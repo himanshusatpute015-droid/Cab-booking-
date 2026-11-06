@@ -1,0 +1,25 @@
+<div class="page-head">
+    <div>
+        <h1>{{heading}}</h1>
+        <p class="muted">{{count}} booking(s)</p>
+    </div>
+    <form class="search" method="GET" action="/bookings">
+        <input name="phone" value="{{phone}}" maxlength="10" placeholder="Find by phone number">
+        <button class="btn btn-primary" type="submit">Search</button>
+        <a class="btn btn-ghost" href="/bookings">Clear</a>
+    </form>
+</div>
+
+<div class="card table-card">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Booking</th><th>Rider</th><th>Route</th><th>Cab</th>
+                <th>Driver</th><th>Fare</th><th>Status</th><th>Booked at</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{{rows}}}
+        </tbody>
+    </table>
+</div>

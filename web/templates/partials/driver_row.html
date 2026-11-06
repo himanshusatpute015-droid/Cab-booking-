@@ -1,0 +1,17 @@
+<tr>
+    <td>#{{id}}</td>
+    <td><strong>{{name}}</strong><small class="block muted">{{license}}</small></td>
+    <td>{{phone}}</td>
+    <td>{{icon}} {{type}}<small class="block muted">{{model}} · {{reg}}</small></td>
+    <td>{{location}}</td>
+    <td>{{rating}}</td>
+    <td>{{rides}}</td>
+    <td>₹{{earnings}}</td>
+    <td><span class="badge {{status_class}}">{{status}}</span></td>
+    <td>
+        <form method="POST" action="/drivers/toggle">
+            <input type="hidden" name="id" value="{{id}}">
+            <button class="btn btn-small" type="submit" {{toggle_disabled}}>{{toggle_label}}</button>
+        </form>
+    </td>
+</tr>

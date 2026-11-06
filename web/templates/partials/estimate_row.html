@@ -1,0 +1,10 @@
+<label class="cab-option {{state_class}}">
+    <input type="radio" name="type" value="{{type}}" {{checked}} {{disabled}} required>
+    <span class="cab-icon">{{icon}}</span>
+    <span class="cab-info">
+        <strong>{{type}}</strong>
+        <small>👤 {{capacity}} · {{availability}}</small>
+        <small class="fine">Base ₹{{base}} + Distance ₹{{distance_fare}} + Surge ₹{{surge_fare}} + Extras ₹{{extra}} + GST ₹{{tax}}</small>
+    </span>
+    <span class="cab-price">₹{{total}}</span>
+</label>

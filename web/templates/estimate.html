@@ -1,0 +1,41 @@
+<section class="card trip-summary">
+    <div class="route">
+        <div class="route-point"><i class="dot dot-green"></i><div><small>Pickup</small><strong>{{pickup}}</strong></div></div>
+        <div class="route-line"></div>
+        <div class="route-point"><i class="dot dot-red"></i><div><small>Drop</small><strong>{{drop}}</strong></div></div>
+    </div>
+    <div class="trip-meta">
+        <div><strong>{{distance}} km</strong><span>Distance</span></div>
+        <div><strong>{{surge}}x</strong><span>Surge</span></div>
+    </div>
+</section>
+
+<form method="POST" action="/book" class="estimate-layout">
+    <input type="hidden" name="pickup" value="{{pickup}}">
+    <input type="hidden" name="drop" value="{{drop}}">
+
+    <div>
+        <h2 class="section-title">Available rides</h2>
+        <div class="cab-options">
+            {{{rows}}}
+        </div>
+    </div>
+
+    <div class="card rider-card">
+        <h2>Rider details</h2>
+        <label class="field"><span>Full name</span>
+            <input name="name" required maxlength="40" placeholder="e.g. Aarav Sharma">
+        </label>
+        <label class="field"><span>Phone number</span>
+            <input name="phone" required maxlength="10" placeholder="10-digit mobile number">
+        </label>
+        <label class="field"><span>Payment method</span>
+            <select name="payment">{{{payment_options}}}</select>
+        </label>
+        <label class="field"><span>Promo code <em>(optional)</em></span>
+            <input name="promo" maxlength="12" placeholder="FIRST50">
+        </label>
+        <button class="btn btn-primary btn-block" type="submit">Confirm booking</button>
+        <a href="/" class="btn btn-ghost btn-block">Change route</a>
+    </div>
+</form>

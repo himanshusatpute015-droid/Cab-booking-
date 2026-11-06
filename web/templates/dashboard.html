@@ -1,0 +1,39 @@
+<div class="page-head">
+    <div>
+        <h1>Dashboard</h1>
+        <p class="muted">Live statistics computed by the C++ engine</p>
+    </div>
+</div>
+
+<div class="grid grid-4 stats">
+    <div class="card stat"><span>Total bookings</span><strong>{{total_bookings}}</strong></div>
+    <div class="card stat"><span>Active rides</span><strong>{{active}}</strong></div>
+    <div class="card stat"><span>Completed</span><strong>{{completed}}</strong></div>
+    <div class="card stat"><span>Cancelled</span><strong>{{cancelled}}</strong></div>
+    <div class="card stat accent"><span>Gross revenue</span><strong>₹{{revenue}}</strong></div>
+    <div class="card stat"><span>Driver payouts (80%)</span><strong>₹{{payouts}}</strong></div>
+    <div class="card stat"><span>Platform commission</span><strong>₹{{commission}}</strong></div>
+    <div class="card stat"><span>Current surge</span><strong>{{surge}}x</strong></div>
+    <div class="card stat"><span>Drivers (available)</span><strong>{{drivers}} ({{available}})</strong></div>
+    <div class="card stat"><span>Customers</span><strong>{{customers}}</strong></div>
+    <div class="card stat"><span>Avg driver rating</span><strong>{{avg_rating}} ★</strong></div>
+    <div class="card stat"><span>Vehicle objects alive</span><strong>{{vehicles_in_memory}}</strong></div>
+</div>
+
+<div class="grid grid-2">
+    <section class="card table-card">
+        <h2>Revenue by cab type</h2>
+        <table class="table">
+            <thead><tr><th>Cab type</th><th>Completed rides</th><th>Revenue</th></tr></thead>
+            <tbody>{{{type_rows}}}</tbody>
+        </table>
+    </section>
+
+    <section class="card table-card">
+        <h2>Customers</h2>
+        <table class="table">
+            <thead><tr><th>ID</th><th>Name</th><th>Phone</th><th>Tier</th><th>Rides</th><th>Spent</th></tr></thead>
+            <tbody>{{{customer_rows}}}</tbody>
+        </table>
+    </section>
+</div>

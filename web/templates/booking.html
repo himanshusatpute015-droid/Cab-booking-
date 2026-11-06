@@ -1,0 +1,53 @@
+<div class="receipt-layout">
+    <section class="card receipt">
+        <div class="receipt-head">
+            <div>
+                <h1>Booking #{{id}}</h1>
+                <small>{{created}}</small>
+            </div>
+            <span class="badge {{status_class}}">{{status}}</span>
+        </div>
+
+        <div class="route route-vertical">
+            <div class="route-point"><i class="dot dot-green"></i><div><small>Pickup</small><strong>{{pickup}}</strong></div></div>
+            <div class="route-line"></div>
+            <div class="route-point"><i class="dot dot-red"></i><div><small>Drop</small><strong>{{drop}}</strong></div></div>
+        </div>
+
+        <h3>Fare breakdown</h3>
+        <table class="breakdown">
+            <tr><td>Base fare</td><td>₹{{base}}</td></tr>
+            <tr><td>Distance charge ({{distance}} km)</td><td>₹{{distance_fare}}</td></tr>
+            <tr><td>Surge pricing</td><td>₹{{surge_fare}}</td></tr>
+            <tr><td>Extras (AC / vehicle fees)</td><td>₹{{extra}}</td></tr>
+            <tr><td>GST (5%)</td><td>₹{{tax}}</td></tr>
+            <tr class="discount"><td>Discount · {{promo}}</td><td>− ₹{{discount}}</td></tr>
+            <tr class="total"><td>Total fare</td><td>₹{{total}}</td></tr>
+        </table>
+        <p class="muted">Payment method: <strong>{{payment}}</strong></p>
+    </section>
+
+    <aside class="side-stack">
+        <section class="card driver-card">
+            <h2>Your driver</h2>
+            <div class="driver-head">
+                <div class="avatar">{{driver_initials}}</div>
+                <div>
+                    <strong>{{driver_name}}</strong>
+                    <small>{{driver_rating}}</small>
+                </div>
+            </div>
+            <div class="vehicle-line">{{vehicle_icon}} {{vehicle_model}} · {{vehicle_type}}</div>
+            <div class="plate">{{vehicle_reg}}</div>
+            <p class="muted">📞 {{driver_phone}} · Arrives in ~{{eta}} min</p>
+        </section>
+
+        <section class="card">
+            <h2>Rider</h2>
+            <p><strong>{{customer_name}}</strong> <span class="badge badge-gray">{{customer_tier}}</span></p>
+            <p class="muted">{{customer_phone}}</p>
+        </section>
+
+        {{{actions}}}
+    </aside>
+</div>

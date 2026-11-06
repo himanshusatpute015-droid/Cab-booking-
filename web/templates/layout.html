@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}} · CabGo</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header class="topbar">
+        <div class="container nav">
+            <a class="brand" href="/"><span class="brand-logo">🚕</span> Cab<span>Go</span></a>
+            <nav class="links">
+                <a href="/" class="{{nav_home}}">Book a Ride</a>
+                <a href="/bookings" class="{{nav_bookings}}">Bookings</a>
+                <a href="/drivers" class="{{nav_drivers}}">Drivers</a>
+                <a href="/dashboard" class="{{nav_dashboard}}">Dashboard</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        {{{content}}}
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            CabGo · Object-oriented cab booking engine written in C++ · HTML &amp; CSS used only for the interface
+        </div>
+    </footer>
+</body>
+</html>

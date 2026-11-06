@@ -1,0 +1,45 @@
+<section class="hero">
+    <div class="hero-text">
+        <span class="eyebrow">Fast · Safe · Affordable</span>
+        <h1>Your ride,<br><span class="highlight">on demand.</span></h1>
+        <p>Pick a route, compare prices across every cab class and get matched with the nearest top-rated driver in seconds.</p>
+        <div class="hero-stats">
+            <div><strong>{{drivers_online}}</strong><span>Drivers available</span></div>
+            <div><strong>{{total_rides}}</strong><span>Rides booked</span></div>
+            <div><strong>{{surge}}x</strong><span>Current surge</span></div>
+        </div>
+    </div>
+
+    <form class="card booking-form" method="POST" action="/estimate">
+        <h2>Where to?</h2>
+        <label class="field">
+            <span><i class="dot dot-green"></i> Pickup location</span>
+            <select name="pickup" required>
+                <option value="" disabled selected>Select pickup point</option>
+                {{{pickup_options}}}
+            </select>
+        </label>
+        <label class="field">
+            <span><i class="dot dot-red"></i> Drop location</span>
+            <select name="drop" required>
+                <option value="" disabled selected>Select destination</option>
+                {{{drop_options}}}
+            </select>
+        </label>
+        <button class="btn btn-primary btn-block" type="submit">See prices &rarr;</button>
+    </form>
+</section>
+
+<section>
+    <h2 class="section-title">Choose from our fleet</h2>
+    <div class="grid grid-3">
+        {{{cab_cards}}}
+    </div>
+</section>
+
+<section>
+    <h2 class="section-title">Offers for you</h2>
+    <div class="grid grid-4">
+        {{{coupon_cards}}}
+    </div>
+</section>

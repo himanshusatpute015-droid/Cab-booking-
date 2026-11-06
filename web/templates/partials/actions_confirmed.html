@@ -1,0 +1,21 @@
+<section class="card actions">
+    <h2>Manage ride</h2>
+    <form method="POST" action="/complete">
+        <input type="hidden" name="id" value="{{id}}">
+        <label class="field"><span>Rate your driver</span>
+            <select name="rating">
+                <option value="5">★★★★★ Excellent</option>
+                <option value="4">★★★★☆ Good</option>
+                <option value="3">★★★☆☆ Okay</option>
+                <option value="2">★★☆☆☆ Poor</option>
+                <option value="1">★☆☆☆☆ Terrible</option>
+            </select>
+        </label>
+        <button class="btn btn-primary btn-block" type="submit">Complete ride &amp; pay ₹{{payable}}</button>
+        <p class="muted small">Includes ₹{{fee}} {{payment}} processing fee.</p>
+    </form>
+    <form method="POST" action="/cancel">
+        <input type="hidden" name="id" value="{{id}}">
+        <button class="btn btn-danger btn-block" type="submit">Cancel booking</button>
+    </form>
+</section>

@@ -1,0 +1,15 @@
+# Build output
+*.exe
+*.o
+*.obj
+cabgo
+
+# Runtime data (re-created automatically on first run)
+data/
+
+# Editor / OS files
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
